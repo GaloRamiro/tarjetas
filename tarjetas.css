@@ -115,6 +115,27 @@ box-shadow: 0 0 0 3px rgba(42,82,152,0.3),
 0 8px 20px rgba(0,0,0,0.3);
 transform: scale(1.05);
 }
+
+#txtsalto {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#txtsalto:focus {
+  border-color: #2ecc71;
+  box-shadow: 0 0 8px rgba(46, 204, 113, 0.5);
+}
+
+#txtsalto::placeholder {
+  color: #999;
+}
+
+
 /* TABLET */
 @media (max-width: 768px) {
   .contenedor {

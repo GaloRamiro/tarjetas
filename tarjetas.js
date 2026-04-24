@@ -7,12 +7,18 @@ function crearTarjetas() {
   let validarHasta = capturarHasta.value;
   let enteroHasta = parseInt(validarHasta);
 
+  let capturarSalto = document.getElementById("txtsalto");
+  let validarSalto = capturarSalto.value;
+  let enteroSalto= parseInt(validarSalto);
+  if (enteroSalto<=0){
+    alert("el salto debe ser mayor a 0");
+    return
+  }
+
   let contenido = "";
   let divTarjetas = document.getElementById("divTarjetas");
-  for (let i = enteroDesde; i <= enteroHasta; i++) {
+  for (let i = enteroDesde; i <= enteroHasta; i+= enteroSalto) {
     contenido = contenido + "<div class='item'>" + i + "</div>";
-    
   }
   divTarjetas.innerHTML = contenido;
 }
-
